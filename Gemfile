@@ -18,16 +18,25 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'blueprint-rails'
 end
 
 gem 'jquery-rails'
+gem 'sorcery'
+gem 'rmagick'
+gem 'fog'
+gem 'carrierwave'
 
 group :test, :development do
   gem 'minitest-rails'
+  gem 'factory_girl_rails'
+  gem 'm'
+  gem 'dotenv-rails'
 end
 
 group :test do
   gem 'minitest-rails-capybara'
+  gem 'selenium-webdriver'
 end
 
 # To use ActiveModel has_secure_password
