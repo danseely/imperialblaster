@@ -1,0 +1,22 @@
+<div class='signin-content container'>
+  <div class='push-5 span-14'>
+    <h1>Sign In</h1>
+    <h5>Enter your email and password below</h5>
+
+    <%= form_for @user, url: sessions_path do |f| %>
+      <div class='field full'>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class='field full last'>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class='actions clear'>
+        <%= f.submit 'Sign In' %>
+      </div>
+    <% end %>
+  </div>
+</div>
