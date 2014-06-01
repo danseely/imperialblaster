@@ -15,6 +15,11 @@ require "minitest/rails/capybara"
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
-
+  include Authentication::Helpers
   # Add more helper methods to be used by all tests here...
+end
+
+class ActionDispatch::IntegrationTest
+  include Rails.application.routes.url_helpers
+  include Capybara::DSL
 end

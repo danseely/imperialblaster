@@ -1,5 +1,5 @@
 class ScanController < ApplicationController
   def index
-    render text: "Let's scan homie!"
+    @first = "here we go!"
   end
 end
