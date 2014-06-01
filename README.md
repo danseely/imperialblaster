@@ -1,7 +1,7 @@
 imperialblaster
 ===============
 
-** Simple barcode scanning and record keeping
+## Simple barcode scanning and record keeping
 
 This will be a simple Rails app for keeping track of any numbers or other bits of data you need to keep track of that are encoded as barcodes (although values can of course be typed in by hand).
 
