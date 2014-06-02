@@ -2,7 +2,22 @@ Imperialblaster::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  root :to => 'scan#index'
+  resources :users, only: [:show, :new, :create]
+  match '/signup' => 'users#new'
+
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signin' => 'sessions#new'
+  match '/signout' => 'sessions#destroy'
+
+  resources :lists, only: [:index, :show, :new, :create] do
+    resources :items, only: [:new, :create, :show]
+  end
+
+  namespace :api, defaults: { format: :json } do
+    resources :lists, except: [:new]
+  end
+
+  root to: redirect('/signup')
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
